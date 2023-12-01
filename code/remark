@@ -1,0 +1,2 @@
+1. 假设test.go，要执行该文件
+docker exec python380_c python test.py
