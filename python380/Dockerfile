@@ -17,5 +17,6 @@ RUN ln -s /usr/local/python3/bin/python3 /usr/bin/python3
 RUN ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 WORKDIR /usr/local
 RUN rm -rf Python-3.8.0.tgz  Python-3.8.0
+WORKDIR /usr/local/code
 
 

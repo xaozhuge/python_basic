@@ -10,5 +10,7 @@ services:
     environment:
       TZ: "Asia/Shanghai"
     restart: always
+    volumes:
+      - ./code:/usr/local/code
     networks:
       - default
