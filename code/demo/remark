@@ -1,3 +1,6 @@
 1. demo项目目录
 2. 执行该目录下文件  test.py
-docker exec python380_c python3 demo/test.py
+docker exec python380_c python3 demo/web.py
+3. python安装包
+docker exec python380_c python3 -m pip install flask
+docker exec python380_c python3 -m pip list|grep flask
