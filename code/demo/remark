@@ -1,6 +1,19 @@
 1. demo项目目录
 2. 执行该目录下文件  test.py
 docker exec python380_c python3 demo/web.py
+docker exec python380_c python3 demo/testmysql.py
+docker exec python380_c python3 demo/mongo.py
+docker exec python380_c python3 demo/file.py
 3. python安装包
 docker exec python380_c python3 -m pip install flask
 docker exec python380_c python3 -m pip list|grep flask
+
+docker exec python380_c python3 -m pip install mysql-connector-python
+docker exec python380_c python3 -m pip list|grep mysql-connector-python
+
+docker exec python380_c python3 -m pip install python-dotenv
+docker exec python380_c python3 -m pip list|grep python-dotenv
+
+docker exec python380_c python3 -m pip install pymongo==3.5.0
+docker exec python380_c python3 -m pip list|grep pymongo
+
