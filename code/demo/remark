@@ -4,6 +4,8 @@ docker exec python380_c python3 demo/web.py
 docker exec python380_c python3 demo/testmysql.py
 docker exec python380_c python3 demo/mongo.py
 docker exec python380_c python3 demo/file.py
+docker exec python380_c python3 demo/shell.py
+docker exec python380_c python3 demo/judgetype.py
 3. python安装包
 docker exec python380_c python3 -m pip install flask
 docker exec python380_c python3 -m pip list|grep flask
