@@ -33,3 +33,8 @@ client.close()
 
 print(result)
 sys.exit();
+
+
+'''
+docker exec python380_c python3 demo/mongo.py
+'''
