@@ -24,3 +24,7 @@ except FileNotFoundError:
     print(f"File not found: {file_path}")
 except Exception as e:
     print(f"An error occurred: {e}")
+
+'''
+docker exec python380_c python3 demo/file.py
+'''
