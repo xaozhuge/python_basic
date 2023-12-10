@@ -2,6 +2,7 @@ import subprocess
 
 # 执行 shell 命令
 command = "ls -l;pwd;du -sh *|sort -h"
+command = "du -sh log"
 result = subprocess.run(command, shell=True, capture_output=True, text=True)
 
 # 获取命令的返回值和输出
