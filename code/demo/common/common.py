@@ -1,6 +1,30 @@
 import pytz
 import datetime
 import sys
+import json
+
+
+# 写入文件
+# 追加模式, 'a'
+# 日志写入加换行
+def writefile(path, content):
+	with open(path, 'a') as file:
+		file.write(content+"\n")
+
+# loga
+def loga(logname='', *args):
+	if not logname:
+		path = 'log/'+nowDay(2) + '.log'
+	else:
+		path = 'log/'+logname + '-' + nowDay(2) + '.log'
+	nowtime=now()
+	combined_args=[nowtime]+list(args)
+
+	# 将列表转换为 JSON 格式的字符串
+	# 使用 ensure_ascii 参数将 JSON 显示为非 Unicode 形式
+	content = json.dumps(combined_args, ensure_ascii=False)
+	# 写入文件
+	writefile(path,content)
 
 # 时间的不同样式
 def dateFormat(time, type):
