@@ -1,48 +1,68 @@
-my_set = {1, 2, 3}
-print(type(my_set))
-print(my_set)
-print("--------------")
 
-# 1. 增加元素
-my_set.add(4)
-print(type(my_set))
-print(my_set)
-print("--------------")
+def createSet():
+	print("createSet()--------------")
+	my_set = {1, 2, 3}
+	print(my_set)
+	print()
 
-# 2. 删除元素
-# 使用 remove 方法删除指定元素，如果元素不存在会引发 KeyError。
-my_set.remove(2)
-print(type(my_set))
-print(my_set)
+def addSetElement():
+	print("addSetElement()--------------")
+	my_set = {1, 2, 3}
+	print(my_set)
+	print('--------------')
 
-# 使用 discard 方法也可以删除指定元素，但如果元素不存在，不会引发错误。
-my_set.discard(3)
-my_set.discard(5)
-print(type(my_set))
-print(my_set)
+	my_set.add(4)
+	print(my_set)
+	print()
 
-# 使用 pop 方法可以随机删除一个元素，并返回删除的元素。
-popped_element = my_set.pop()
-print(type(popped_element))
-print(popped_element)
-print(type(my_set))
-print(my_set)
-print("--------------")
+def deleteSetElement():
+	print("deleteSetElement()--------------")
+	my_set = {1, 2, 3, 4, 5, 6, 7}
+	print(my_set)
+	print('--------------')
+	
+	# 使用 remove 方法删除指定元素，如果元素不存在会引发 KeyError。
+	my_set.remove(2)
+	print(my_set)
+	print('--------------')
+	
+	# 使用 discard 方法也可以删除指定元素，但如果元素不存在，不会引发错误。
+	my_set.discard(3)
+	my_set.discard(9)
+	print(my_set)
+	print('--------------')
+	
+	# 使用 pop 方法可以随机删除一个元素，并返回删除的元素。
+	popped_element = my_set.pop()
+	print(popped_element)
+	print('--------------')
+	print(my_set)
+	print()
 
-# 3. 查询元素
-# 使用 in 关键字可以检查元素是否存在于集合中。
-my_set = {1, 2, 3}
-if 2 in my_set:
-    print("Element 2 is in the set.")
-else:
-	print("Element 2 is not in the set.")
+def selectSetElement():
+	print("selectSetElement()--------------")
+	# 使用 in 关键字可以检查元素是否存在于集合中。
+	my_set = {1, 2, 3}
+	print(my_set)
+	print('--------------')
 
-if 4 not in my_set:
-    print("Element 4 is not in the set.")
-else:
-    print("Element 4 is in the set.")
+	if 2 in my_set:
+	    print("Element 2 is in the set.")
+	else:
+		print("Element 2 is not in the set.")
+
+	print('--------------')
+
+	if 4 not in my_set:
+	    print("Element 4 is not in the set.")
+	else:
+	    print("Element 4 is in the set.")
 
 
+createSet()
+addSetElement()
+deleteSetElement()
+selectSetElement()
 
 '''
 docker exec python380_c python3 demo/type_set.py
