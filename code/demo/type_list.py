@@ -13,16 +13,20 @@ def createList():
 	print(my_list)
 	print()
 	
-def selectList():
-	print('selectList()----------------')
+def selectListElement():
+	print('selectListElement()----------------')
 	my_list = [1, 2, 3, 'hello']
+	print(my_list)
+	print('----------------')
 	element = my_list[0]
 	print(element)
 	print()
 
-def addList():	
-	print('addList()----------------')
+def addListElement():	
+	print('addListElement()----------------')
 	my_list = [1, 2, 3, 'hello']
+	print(my_list)
+	print('----------------')
 	# 在末尾添加元素
 	my_list.append(4)
 	print(my_list)
@@ -33,11 +37,11 @@ def addList():
 	print(my_list)
 	print()
 
-
-
-def deleteList():
-	print('deleteList()----------------')
+def deleteListElement():
+	print('deleteListElement()----------------')
 	my_list = [1, 2, 3, 'hello']
+	print(my_list)
+	print('----------------')
 	# 根据值删除元素
 	my_list.remove('hello')
 	print(my_list)
@@ -56,17 +60,21 @@ def deleteList():
 	print(my_list)
 	print()
 	
-def updateList():
-	print('updateList()----------------')
+def updateListElement():
+	print('updateListElement()----------------')
 	my_list = [1, 2, 3, 'hello']
+	print(my_list)
+	print('----------------')
 	# 根据索引修改元素
 	my_list[0] = 'new_value'
 	print(my_list)
 	print()
 
-def keyList():
-	print('keyList()----------------')
+def selectList():
+	print('selectList()----------------')
 	my_list = [1, 2, 3, 'hello']
+	print(my_list)
+	print('----------------')
 	# 获取列表长度
 	length = len(my_list)
 	print(length)
@@ -87,11 +95,11 @@ def keyList():
 	print(count)
 
 createList()
+selectListElement()
+addListElement()
+deleteListElement()
+updateListElement()
 selectList()
-addList()
-deleteList()
-updateList()
-keyList()
 
 '''
 docker exec python380_c python3 demo/type_list.py
