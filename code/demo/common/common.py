@@ -20,9 +20,11 @@ def loga(logname='', *args):
 	nowtime=now()
 	combined_args=[nowtime]+list(args)
 
+	combined_args_str = [str(item) for item in combined_args]
+
 	# 将列表转换为 JSON 格式的字符串
 	# 使用 ensure_ascii 参数将 JSON 显示为非 Unicode 形式
-	content = json.dumps(combined_args, ensure_ascii=False)
+	content = json.dumps(combined_args_str, ensure_ascii=False)
 	# 写入文件
 	writefile(path,content)
 
