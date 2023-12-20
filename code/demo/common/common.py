@@ -64,3 +64,9 @@ def p(*args):
     # 然后退出程序
     sys.exit(0)
 
+def t(*args):
+	for arg in args:
+		print("值为:",arg,"\n类型为:", type(arg))
+	# 然后退出程序
+	sys.exit(0)
+
