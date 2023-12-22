@@ -1,59 +1,50 @@
+from common.common import d
+from common.common import pe
 
 def typeInt():
-	print("typeInt()-------------")
+	pe("typeInt")
 	var = 42
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()
+	d(var)
 
 def typeFloat():
-	print("typeFloat()-------------")
+	pe("typeFloat")
 	var = 3.14
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()
+	d(var)
 
 def typeStr():
-	print("typeStr()-------------")
+	pe("typeStr")
 	var = "Hello, World!"
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()
+	d(var)
 
 def typeList():
-	print("typeList()-------------")
+	pe("typeList")
 	var = [1, 2, 3]
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()
+	d(var)
 
 def typeTuple():
-	print("typeTuple()-------------")
+	pe("typeTuple")
 	var = (1, 2, 3)
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()
+	d(var)
 
 def typeDict():
-	print("typeDict()-------------")
+	pe("typeDict")
 	var = {"key": "value"}
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()
+	d(var)
 
 def typeBool():
-	print("typeBool()-------------")
+	pe("typeBool")
 	var = True
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()	
+	d(var)
 
 def typeRange():
-	print("typeRange()-------------")
+	pe("typeRange")
 	var = range(1, 6)
-	var_type = type(var)
-	print(f"值为: {var} ，类型为: {var_type}")
-	print()	
+	d(var)
+
+def typeSet():
+	pe("typeSet")
+	var = {1, 2, 3}
+	d(var)
 
 typeInt()
 typeFloat()
@@ -63,6 +54,7 @@ typeTuple()
 typeDict()
 typeBool()
 typeRange()
+typeSet()
 
 
 '''
