@@ -70,3 +70,11 @@ def t(*args):
 	# 然后退出程序
 	sys.exit(0)
 
+def pe(name):
+	print(f"{name}()-------------")
+
+def d(*args):
+	for arg in args:
+		print("值为:",arg,"，类型为:", type(arg))
+	print()
+
