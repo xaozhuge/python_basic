@@ -1,3 +1,6 @@
+import os
+import string
+
 from common.common import d
 from common.common import pe
 
@@ -46,15 +49,66 @@ def typeSet():
 	var = {1, 2, 3}
 	d(var)
 
+def typeComplex():
+	pe("typeComplex")
+	var = 3 + 4j
+	d(var)
+
+def my_function():
+	pass
+
+def typeFunction():
+	pe("typeFunction")
+	var = my_function
+	d(var)
+
+class MyClass:
+    pass
+
+def typeType():
+	pe("typeType")
+	var = MyClass
+	d(var)
+
+def typeModule():
+	pe("typeModule")
+	var = os
+	d(var)
+
+def typeNoneType():
+	pe("typeNoneType")
+	var = None
+	d(var)
+
+class CustomClass:
+    pass
+
+def typeCustom():
+	pe("typeCustom")
+	var = CustomClass()
+	d(var)
+
+def typeGenerator():
+	pe("typeGenerator")
+	var = (x for x in range(5))
+	d(var)
+
 typeInt()
 typeFloat()
-typeStr()
-typeList()
-typeTuple()
-typeDict()
+typeComplex()
 typeBool()
-typeRange()
+typeStr()
+typeTuple()
+typeList()
 typeSet()
+typeDict()
+typeRange()
+typeFunction()
+typeType()
+typeModule()
+typeNoneType()
+typeCustom()
+typeGenerator()
 
 
 '''
