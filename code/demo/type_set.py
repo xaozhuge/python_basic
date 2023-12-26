@@ -1,62 +1,54 @@
+from common.common import pe
+from common.common import d
 
 def createSet():
-	print("createSet()--------------")
+	pe("createSet")
 	my_set = {1, 2, 3}
-	print(my_set)
-	print()
+	d(my_set)
 
 def addSetElement():
-	print("addSetElement()--------------")
+	pe("addSetElement")
 	my_set = {1, 2, 3}
-	print(my_set)
-	print('--------------')
+	d(my_set)
 
 	my_set.add(4)
-	print(my_set)
-	print()
+	d(my_set)
 
 def deleteSetElement():
-	print("deleteSetElement()--------------")
+	pe("deleteSetElement")
 	my_set = {1, 2, 3, 4, 5, 6, 7}
-	print(my_set)
-	print('--------------')
+	d(my_set)
 	
 	# 使用 remove 方法删除指定元素，如果元素不存在会引发 KeyError。
 	my_set.remove(2)
-	print(my_set)
-	print('--------------')
+	d(my_set)
 	
 	# 使用 discard 方法也可以删除指定元素，但如果元素不存在，不会引发错误。
 	my_set.discard(3)
 	my_set.discard(9)
-	print(my_set)
-	print('--------------')
+	d(my_set)
 	
 	# 使用 pop 方法可以随机删除一个元素，并返回删除的元素。
 	popped_element = my_set.pop()
-	print(popped_element)
-	print('--------------')
-	print(my_set)
-	print()
+	d(popped_element)
+	d(my_set)
 
 def selectSetElement():
-	print("selectSetElement()--------------")
+	pe("selectSetElement")
 	# 使用 in 关键字可以检查元素是否存在于集合中。
 	my_set = {1, 2, 3}
-	print(my_set)
-	print('--------------')
+	d(my_set)
 
 	if 2 in my_set:
-	    print("Element 2 is in the set.")
+	    d("Element 2 is in the set.")
 	else:
-		print("Element 2 is not in the set.")
+		d("Element 2 is not in the set.")
 
-	print('--------------')
 
 	if 4 not in my_set:
-	    print("Element 4 is not in the set.")
+	    d("Element 4 is not in the set.")
 	else:
-	    print("Element 4 is in the set.")
+	    d("Element 4 is in the set.")
 
 
 createSet()
