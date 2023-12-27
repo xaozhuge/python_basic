@@ -1,98 +1,97 @@
+
+from common.common import pe
+from common.common import d
+
 def createList():
-	print('createList()----------------')
+	pe("createList")
 	my_list = [1, 2, 3, 'hello']
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	# 切片
 	subset = my_list[1:3]
-	print(subset)
-	print('----------------')
+	d(subset)
+	
 	# 扩展列表（将另一个列表的元素添加到末尾）
 	another_list = [1, 2, 3]
 	my_list.extend(another_list)
-	print(my_list)
-	print()
+	d(my_list)
+	
 	
 def selectListElement():
-	print('selectListElement()----------------')
+	pe("selectListElement")
 	my_list = [1, 2, 3, 'hello']
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	element = my_list[0]
-	print(element)
-	print()
+	d(element)
+	
 
-def addListElement():	
-	print('addListElement()----------------')
+def addListElement():
+	pe("addListElement")
 	my_list = [1, 2, 3, 'hello']
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	# 在末尾添加元素
 	my_list.append(4)
-	print(my_list)
-	print('----------------')
-
+	d(my_list)
+	
 	# 在指定位置插入元素
 	my_list.insert(1, 'new_element')
-	print(my_list)
-	print()
+	d(my_list)
+	
 
 def deleteListElement():
-	print('deleteListElement()----------------')
+	pe("deleteListElement")
 	my_list = [1, 2, 3, 'hello']
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	# 根据值删除元素
 	my_list.remove('hello')
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	# 根据索引删除元素
 	del my_list[0]
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	# 弹出并返回指定位置的元素
 	popped_element = my_list.pop(1)
-	print(popped_element)
-	print(my_list)
-	print('----------------')
+	d(popped_element)
+	d(my_list)
+	
 	# 清空列表
 	my_list.clear()
-	print(my_list)
-	print()
+	d(my_list)
+	
 	
 def updateListElement():
-	print('updateListElement()----------------')
+	pe("updateListElement")
 	my_list = [1, 2, 3, 'hello']
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	# 根据索引修改元素
 	my_list[0] = 'new_value'
-	print(my_list)
-	print()
-
+	d(my_list)
+	
 def selectList():
-	print('selectList()----------------')
+	pe("selectList")
 	my_list = [1, 2, 3, 'hello']
-	print(my_list)
-	print('----------------')
+	d(my_list)
+	
 	# 获取列表长度
 	length = len(my_list)
-	print(length)
-	print('----------------')
+	d(length)
 	
 	# 判断元素是否在列表中
 	is_present = 'hello' in my_list
-	print(is_present)
-	print('----------------')
+	d(is_present)
 
 	# 获取元素的索引
 	index = my_list.index('hello')
-	print(index)
-	print('----------------')
+	d(index)
 
 	# 统计元素出现的次数
 	count = my_list.count(2)
-	print(count)
+	d(count)
 
 createList()
 selectListElement()
