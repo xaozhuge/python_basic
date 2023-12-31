@@ -93,6 +93,15 @@ def typeGenerator():
 	var = (x for x in range(5))
 	d(var)
 
+async def coroutineUse():
+	pe("coroutineUse")
+
+def typeCoroutine():
+	pe("typeCoroutine")
+	var = coroutineUse()
+	d(var)
+
+
 typeInt()
 typeFloat()
 typeComplex()
@@ -109,6 +118,7 @@ typeModule()
 typeNoneType()
 typeCustom()
 typeGenerator()
+typeCoroutine()
 
 
 '''
@@ -117,4 +127,7 @@ docker exec python380_c python3 demo/judgetype.py
 
 '''
 1. 使用 type() 函数判断变量类型
+2. async 定义的异步函数到底返回的是
+coroutine object 也就是协程对象，并没直接执行
+
 '''
