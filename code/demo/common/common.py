@@ -12,11 +12,26 @@ def writefile(path, content):
 		file.write(content+"\n")
 
 # loga
-def loga(logname='', *args):
+def logb(logname='', *args):
 	if not logname:
 		path = 'log/'+nowDay(2) + '.log'
 	else:
 		path = 'log/'+logname + '-' + nowDay(2) + '.log'
+	nowtime=now()
+	combined_args=[nowtime]+list(args)
+
+	combined_args_str = [str(item) for item in combined_args]
+
+	# 将列表转换为 JSON 格式的字符串
+	# 使用 ensure_ascii 参数将 JSON 显示为非 Unicode 形式
+	content = json.dumps(combined_args_str, ensure_ascii=False)
+	# 写入文件
+	writefile(path,content)
+
+
+# loga
+def loga(*args):
+	path = 'log/'+nowDay(2) + '.log'
 	nowtime=now()
 	combined_args=[nowtime]+list(args)
 
