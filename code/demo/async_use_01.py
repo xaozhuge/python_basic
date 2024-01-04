@@ -43,6 +43,7 @@ async def multiTask():
 # 创建一个事件循环
 loop = asyncio.get_event_loop()
 # 将协程对象加入到事件循环中，并执行
+# 运行协程直到完成
 result = loop.run_until_complete(multiTask())  
 
 
@@ -52,6 +53,7 @@ docker exec python380_c python3 demo/async_use_01.py
 
 '''
 1. 多任务的异步的处理，通过 create_task + await 方式
+2. run_until_complet接收一个协程对象
 
 
 
